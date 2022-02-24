@@ -16,7 +16,6 @@ class Delete extends Component {
     this.setState({
       city: null
     });
-    alert("La ville de " + this.props.city.name + " a bien été supprimée");
   }
 
   render() {

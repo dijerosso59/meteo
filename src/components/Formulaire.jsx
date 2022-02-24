@@ -16,7 +16,6 @@ class Formulaire extends Component {
     this.setState({
       city: null
     });
-    alert("La ville de " + this.props.city.name + " a bien été ajoutée");
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
