@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap')
+
+*
+    font-family: 'Poppins', sans-serif !important
+    
+
+#AppMeteo
+    background-image: url(../images/mountain-2.jpeg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    min-height: 100vh
+    color: #15164f
+
+    header
+        display: flex
+        justify-content: space-around
+        font-size: 1rem
+        align-items: center
+        padding: 1rem 0
+
+        img
+            width: 8%
+
+        ul
+            display: flex
+            list-style: none
+            padding: 0
+
+            li
+                margin-right: 3rem
+
+                a
+                    text-decoration: none
+                    color: #15164f
+                    transition: transform 0.3s ease-in-out
+                    display: block
+
+                    &:hover
+                            transform: scale(1.1)
+
+    main
+        text-align: center
+        margin-top: 3rem
+        max-width: 800px
+        margin-right: auto
+        margin-left: auto
+
+        .forecast
+            overflow-x: auto
+            font-size: 1rem
+            display: flex
+            justify-content: space-between
+            font-weight: normal
+            margin-top: 3rem
+
+            div
+                display: flex
+                flex-direction: column
+                width: 15rem
+                flex: none
+                gap: 0.5rem
+
+                img
+                    width: 50px
+                    height: 50px
+                    margin: auto
+
+        a, .btn
+            background: #15164f
+            color: white
+            padding: 1rem
+            border-radius: 0.5rem
+            text-decoration: none
+            transition: transform 0.3s ease-in-out
+            display: block
+            width: 10rem
+            margin: 0 auto
+            border: none
+
+            &:hover
+                cursor: pointer
+                transform: scale(1.1)
+
+        .btn-add
+            @extend .btn
+            background: green
+            margin: 0
+            padding: 0.5rem
+
+        h1
+            font-weight: 900
+            font-size: 3rem
+
+        h2
+            font-weight: 800
+            font-size: 2rem
+            margin: 0
+
+        p
+            margin: 0
+
+        .meteo
+            position: relative
+
+            button
+                @extend .btn
+                position: absolute
+                top: 3rem
+                right: -12rem
+                animation-name: scroll
+                animation-duration: 2s
+                animation-direction: alternate-reverse
+                animation-iteration-count: infinite
+                animation-timing-function: ease-in-out
+
+            // @keyframes scroll
+            //     from
+            //         transform: translateY(25%)
+
+            //     to
+            //         transform: translateY(75%)
+
+        .text
+            line-height: 1.5
+            margin: 2rem 0
+
+        .ville
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+            input
+                padding: 1rem
+                border-radius: 0.5rem
+                border: none
+                width: 50%
+                margin-bottom: 2rem
+                background: white
+                color: black
+
+                &:focus
+                    outline: none
+
+        .result
+            margin-top: 3rem
+            font-size: 1.5rem
+            font-weight: bold
+            color: white
+            background: #15164fbf
+            padding: 1.5rem
+            border-radius: 0.5rem
+
+            .gif
+                width: 15%
+
+            .current
+                display: flex
+                justify-content: space-evenly
+                align-items: center
+                margin-top: 1rem
+
+            h2
+                width: 80%
+                text-align: center
+                margin: 0 auto
+
+// sass --watch style.sass style.css
