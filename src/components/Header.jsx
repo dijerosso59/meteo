@@ -12,7 +12,7 @@ function Header() {
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/search">Rechercher</Link></li>
-                <li><Link to="/list">Liste des villes</Link></li>
+                <li><Link to="/list">Villes</Link></li>
             </ul>
         </header>
     )

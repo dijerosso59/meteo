@@ -20,7 +20,7 @@ class Delete extends Component {
 
   render() {
     return (
-      <button className="btn-add" onClick={(e) => this.submitForm(e)} >
+      <button className="btn-del" onClick={(e) => this.submitForm(e)} >
         Supprimer
       </button>
     );

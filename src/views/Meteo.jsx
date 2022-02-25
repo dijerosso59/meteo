@@ -21,16 +21,14 @@ function Meteo() {
             setForecast(await weatherRepository.getForecast(coords.latitude, coords.longitude));
         });
 
-        console.log(forecast);
-
     }, []);
 
     function getDate(dateString) {
         let date = new Date(dateString);
         return date.toLocaleString('fr-FR', {
-            day: 'numeric',
+            // day: 'numeric',
             hour: 'numeric',
-            weekday: 'long',
+            // weekday: 'long',
             // month: 'long',
         });
     }
@@ -41,7 +39,7 @@ function Meteo() {
             <main>
                 <h1>Bienvenue Sur Di Rosso Meteo</h1>
                 <div className="text">
-                    <p>Une application qui vous permet de connaitre la météo de votre ville<br />
+                    <p>Une application qui vous permet de connaitre la météo de votre ville<br></br>
                         Vous pouvez aussi rechercher la météo d'une ville en cliquant sur le bouton ci-dessous</p>
                 </div>
                 <Link to="/search">Rechercher</Link>
@@ -57,7 +55,9 @@ function Meteo() {
                             </div>
                         </div>
 
-                        <button className="btn" onClick={() => setShowForecast(!showForecast)}>Voir les prévisions</button>
+                        <button className="btn" onClick={() => setShowForecast(!showForecast)}>
+                            { showForecast ? 'Cacher' : 'Afficher' } les prévisions
+                        </button>
 
                         {showForecast && (
                             <div className="result">
@@ -66,7 +66,7 @@ function Meteo() {
 
                                     {forecast && forecast.list.map((item, index) => {
 
-                                        if (index < 8) {
+                                        if (index < 9) {
 
                                             return (
                                                 <div key={index}>

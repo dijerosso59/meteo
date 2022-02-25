@@ -21,7 +21,7 @@ function SearchCity() {
     return (
         <div id="AppMeteo">
             <Header />
-            <main>
+            <main className="search">
                 <h1>Rechercher une ville</h1>
                 <form className="ville" onSubmit={handleSubmit}>
                     <input type="text" placeholder="Entrez une ville" value={input} onChange={({ target }) => setInput(target.value)} />
@@ -37,7 +37,6 @@ function SearchCity() {
                             <Formulaire city={ city } />
                         </div>
                     </div> : ''}
-                {error ? { error } : ''}
             </main>
         </div>
     );

@@ -11,6 +11,7 @@
     background-position: center
     min-height: 100vh
     color: #15164f
+    padding: 1rem
 
     header
         display: flex
@@ -19,6 +20,9 @@
         align-items: center
         padding: 1rem 0
 
+        a
+            text-align: center
+
         img
             width: 70%
 
@@ -26,9 +30,9 @@
             display: flex
             list-style: none
             padding: 0
+            gap: 2rem
 
             li
-                margin-right: 3rem
 
                 a
                     text-decoration: none
@@ -87,15 +91,15 @@
             background: green
             margin: 0
             padding: 0.5rem
+            
+        .btn-del
+            @extend .btn-add
+            background: #cf3232
 
         h1
             font-weight: 900
             font-size: 3rem
-
-        h2
-            font-weight: 800
-            font-size: 2rem
-            margin: 0
+            text-align: center
 
         p
             margin: 0
@@ -153,5 +157,53 @@
                 width: 80%
                 text-align: center
                 margin: 0 auto
+                font-weight: 800
+                font-size: 2rem
+
+@media (max-width: 800px)
+
+    #AppMeteo
+
+        header
+            flex-direction: column
+
+        main
+            max-width: 340px
+
+            h1
+                font-size: 2rem
+                width: 80%
+                margin: auto
+
+            .ville
+                input
+                    margin-top: 2rem
+
+            .meteo
+                button
+                    position: static
+                    margin-top: 2rem
+
+            .result
+                position: relative
+
+                h2
+                    font-size: 1.8rem
+
+                .current
+                    font-size: 1rem
+
+                .gif
+                    width: 50%
+
+            .btn-add, .btn-del
+                position: absolute
+                bottom: -4rem
+
+        main.search
+            h1
+                width: 100%
+            
+                
 
 // sass --watch style.sass style.css
