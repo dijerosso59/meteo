@@ -7,7 +7,11 @@ export const citySlice = createSlice({
     },
     reducers: {
         addCity: (state, action) => {
+            if (state.listOfCities.find(city => city.id === action.payload.id)) {
+                alert(action.payload.name + ' existe déja dans vos villes favorites !');
+            } else {
             state.listOfCities.push(action.payload);
+            }
         },
         removeCity: (state, action) => {
             state.listOfCities = state.listOfCities.filter(city => city.id !== action.payload.id);
